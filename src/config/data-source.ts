@@ -6,6 +6,8 @@ import { TaskDependency } from "../entities/TaskDependency";
 import { Task } from "../entities/Task";
 
 dotenv.config();
+// console.log(process.env)
+
 
 export const AppDataSource = new DataSource({
     type: "mysql",
