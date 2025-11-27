@@ -1,5 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, BeforeInsert, BeforeUpdate } from "typeorm";
 import { Task } from "./Task";
+import { Loggers } from "./Loggers";
 
 
 @Entity()
@@ -18,6 +19,9 @@ export class User {
 
     @OneToMany(() => Task, (task) => task.user)
     tasks!: Task[];
+
+    @OneToMany(() => Loggers, (loggers) => loggers.user)
+    loggers!: Loggers[];
 
     @Column({ type: "datetime" })
     createdAt!: Date;

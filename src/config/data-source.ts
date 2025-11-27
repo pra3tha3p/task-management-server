@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 import { User } from "../entities/User";
 import { TaskDependency } from "../entities/TaskDependency";
 import { Task } from "../entities/Task";
+import { Loggers } from "../entities/Loggers";
 
 dotenv.config();
 // console.log(process.env)
@@ -18,7 +19,7 @@ export const AppDataSource = new DataSource({
     database: process.env.DB_NAME || "sql12808956",
     synchronize: true, // Auto-create tables (dev only)
     logging: false,
-    entities: [User, Task, TaskDependency],
+    entities: [User, Task, TaskDependency,Loggers],
     migrations: [],
     subscribers: [],
 });

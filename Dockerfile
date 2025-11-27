@@ -34,3 +34,4 @@ EXPOSE 4002
 
 # Command to run the built application
 CMD ["node", "build/index.js"]
+
